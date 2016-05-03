@@ -1,0 +1,1 @@
+./aws-s3-test.sh 2>&1 | tee -a aws-s3-test.GENERIC.log

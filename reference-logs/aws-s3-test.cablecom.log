@@ -1,0 +1,260 @@
+>> attempt 1 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 1 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 1 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 2 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 2 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 2 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 3 for 12mb.img...
+upload failed: ./12mb.img to s3://S3BUCKET/12mb.img
+
+
+>> attempt 3 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 3 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 4 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 4 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 4 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 5 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 5 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 5 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 6 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 6 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 6 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 7 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 7 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 7 for 18mb.img...
+upload failed: ./18mb.img to s3://S3BUCKET/18mb.img
+
+
+>> attempt 8 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 8 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 8 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 9 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 9 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 9 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+>> attempt 10 for 12mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./12mb.img to s3://S3BUCKET/12mb.img
+>> attempt 10 for 15mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./15mb.img to s3://S3BUCKET/15mb.img
+>> attempt 10 for 18mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./18mb.img to s3://S3BUCKET/18mb.img
+1+0 Datensätze ein
+1+0 Datensätze aus
+31457280 Bytes (31 MB) kopiert, 2.71697 s, 11.6 MB/s
+>> attempt 1 for 30mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./30mb.img to s3://S3BUCKET/30mb.img
+>> attempt 2 for 30mb.img...
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+
+>> attempt 3 for 30mb.img...
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+(32, 'EPIPE')
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+Completed 2 of 4 part(s) with -1 file(s) remainingupload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+Completed 3 of 4 part(s) with -2 file(s) remainingCompleted 4 of 4 part(s) with -2 file(s) remaining
+>> attempt 4 for 30mb.img...
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+(32, 'EPIPE')
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+Completed 2 of 4 part(s) with -1 file(s) remainingCompleted 3 of 4 part(s) with -1 file(s) remainingCompleted 4 of 4 part(s) with -1 file(s) remaining
+>> attempt 5 for 30mb.img...
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+Completed 2 of 4 part(s) with -1 file(s) remainingCompleted 3 of 4 part(s) with -1 file(s) remainingCompleted 4 of 4 part(s) with -1 file(s) remaining
+>> attempt 6 for 30mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./30mb.img to s3://S3BUCKET/30mb.img
+>> attempt 7 for 30mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./30mb.img to s3://S3BUCKET/30mb.img
+>> attempt 8 for 30mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./30mb.img to s3://S3BUCKET/30mb.img
+>> attempt 9 for 30mb.img...
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+upload: ./30mb.img to s3://S3BUCKET/30mb.img
+>> attempt 10 for 30mb.img...
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+
+upload failed: ./30mb.img to s3://S3BUCKET/30mb.img
+(104, 'ECONNRESET')
+Completed 4 of 4 part(s) with -1 file(s) remaining
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+1+0 Datensätze ein
+1+0 Datensätze aus
+9437184 Bytes (9.4 MB) kopiert, 0.816757 s, 11.6 MB/s
+>> attempt 1 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+1+0 Datensätze ein
+1+0 Datensätze aus
+22020096 Bytes (22 MB) kopiert, 1.90235 s, 11.6 MB/s
+>> attempt 1 for 21mb.img...
+upload failed: ./21mb.img to s3://S3BUCKET/21mb.img
+
+
+1+0 Datensätze ein
+1+0 Datensätze aus
+25165824 Bytes (25 MB) kopiert, 2.17093 s, 11.6 MB/s
+>> attempt 1 for 24mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+1+0 Datensätze ein
+1+0 Datensätze aus
+28311552 Bytes (28 MB) kopiert, 2.43876 s, 11.6 MB/s
+>> attempt 1 for 27mb.img...
+upload failed: ./27mb.img to s3://S3BUCKET/27mb.img
+
+
+0+1 Datensätze ein
+0+1 Datensätze aus
+33554431 Bytes (34 MB) kopiert, 2.90134 s, 11.6 MB/s
+>> attempt 1 for 33mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 2 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 2 for 21mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 2 for 24mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 2 for 27mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 2 for 33mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 3 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 3 for 21mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 3 for 24mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 3 for 27mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 3 for 33mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 4 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 4 for 21mb.img...
+upload failed: ./21mb.img to s3://S3BUCKET/21mb.img
+(104, 'ECONNRESET')
+upload failed: ./21mb.img to s3://S3BUCKET/21mb.img
+(104, 'ECONNRESET')
+Completed 2 of 3 part(s) with -1 file(s) remainingupload failed: ./21mb.img to s3://S3BUCKET/21mb.img
+(104, 'ECONNRESET')
+Completed 3 of 3 part(s) with -2 file(s) remaining
+>> attempt 4 for 24mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 4 for 27mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 4 for 33mb.img...
+upload failed: ./33mb.img to s3://S3BUCKET/33mb.img
+
+
+>> attempt 5 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 5 for 21mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 5 for 24mb.img...
+upload failed: ./24mb.img to s3://S3BUCKET/24mb.img
+(32, 'EPIPE')
+
+>> attempt 5 for 27mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 5 for 33mb.img...
+Completed 1 of 4 part(s) with 1 file(s) remainingCompleted 2 of 4 part(s) with 1 file(s) remainingCompleted 3 of 4 part(s) with 1 file(s) remainingCompleted 4 of 4 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 6 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 6 for 21mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 6 for 24mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 6 for 27mb.img...
+upload failed: ./27mb.img to s3://S3BUCKET/27mb.img
+
+
+>> attempt 6 for 33mb.img...
+upload failed: ./33mb.img to s3://S3BUCKET/33mb.img
+
+
+>> attempt 7 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 7 for 21mb.img...
+Completed 1 of 3 part(s) with 1 file(s) remainingCompleted 2 of 3 part(s) with 1 file(s) remainingCompleted 3 of 3 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 7 for 24mb.img...
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+>> attempt 1 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 1 for 21mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingupload failed: ./21mb.img to s3://S3BUCKET/21mb.img
+('Connection aborted.', error(104, 'Connection reset by peer'))
+Completed 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remaining
+>> attempt 1 for 24mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 1 for 27mb.img...
+Completed 1 of 6 part(s) with 1 file(s) remainingCompleted 2 of 6 part(s) with 1 file(s) remainingCompleted 3 of 6 part(s) with 1 file(s) remainingCompleted 4 of 6 part(s) with 1 file(s) remainingCompleted 5 of 6 part(s) with 1 file(s) remainingCompleted 6 of 6 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 1 for 33mb.img...
+Completed 1 of 7 part(s) with 1 file(s) remainingCompleted 2 of 7 part(s) with 1 file(s) remainingCompleted 3 of 7 part(s) with 1 file(s) remainingCompleted 4 of 7 part(s) with 1 file(s) remainingCompleted 5 of 7 part(s) with 1 file(s) remainingCompleted 6 of 7 part(s) with 1 file(s) remainingCompleted 7 of 7 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 2 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 2 for 21mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 2 for 24mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 2 for 27mb.img...
+Completed 1 of 6 part(s) with 1 file(s) remainingCompleted 2 of 6 part(s) with 1 file(s) remainingCompleted 3 of 6 part(s) with 1 file(s) remainingCompleted 4 of 6 part(s) with 1 file(s) remainingCompleted 5 of 6 part(s) with 1 file(s) remainingCompleted 6 of 6 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 2 for 33mb.img...
+Completed 1 of 7 part(s) with 1 file(s) remainingCompleted 2 of 7 part(s) with 1 file(s) remainingCompleted 3 of 7 part(s) with 1 file(s) remainingCompleted 4 of 7 part(s) with 1 file(s) remainingCompleted 5 of 7 part(s) with 1 file(s) remainingCompleted 6 of 7 part(s) with 1 file(s) remainingCompleted 7 of 7 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 3 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 3 for 21mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 3 for 24mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 3 for 27mb.img...
+Completed 1 of 6 part(s) with 1 file(s) remainingCompleted 2 of 6 part(s) with 1 file(s) remainingCompleted 3 of 6 part(s) with 1 file(s) remainingCompleted 4 of 6 part(s) with 1 file(s) remainingCompleted 5 of 6 part(s) with 1 file(s) remainingCompleted 6 of 6 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 3 for 33mb.img...
+Completed 1 of 7 part(s) with 1 file(s) remainingCompleted 2 of 7 part(s) with 1 file(s) remainingCompleted 3 of 7 part(s) with 1 file(s) remainingCompleted 4 of 7 part(s) with 1 file(s) remainingCompleted 5 of 7 part(s) with 1 file(s) remainingCompleted 6 of 7 part(s) with 1 file(s) remainingCompleted 7 of 7 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img
+>> attempt 4 for 9mb.img...
+Completed 1 of 2 part(s) with 1 file(s) remainingCompleted 2 of 2 part(s) with 1 file(s) remainingupload: ./9mb.img to s3://S3BUCKET/9mb.img
+>> attempt 4 for 21mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./21mb.img to s3://S3BUCKET/21mb.img
+>> attempt 4 for 24mb.img...
+Completed 1 of 5 part(s) with 1 file(s) remainingCompleted 2 of 5 part(s) with 1 file(s) remainingCompleted 3 of 5 part(s) with 1 file(s) remainingCompleted 4 of 5 part(s) with 1 file(s) remainingCompleted 5 of 5 part(s) with 1 file(s) remainingupload: ./24mb.img to s3://S3BUCKET/24mb.img
+>> attempt 4 for 27mb.img...
+Completed 1 of 6 part(s) with 1 file(s) remainingCompleted 2 of 6 part(s) with 1 file(s) remainingCompleted 3 of 6 part(s) with 1 file(s) remainingCompleted 4 of 6 part(s) with 1 file(s) remainingCompleted 5 of 6 part(s) with 1 file(s) remainingCompleted 6 of 6 part(s) with 1 file(s) remainingupload: ./27mb.img to s3://S3BUCKET/27mb.img
+>> attempt 4 for 33mb.img...
+Completed 1 of 7 part(s) with 1 file(s) remainingCompleted 2 of 7 part(s) with 1 file(s) remainingCompleted 3 of 7 part(s) with 1 file(s) remainingCompleted 4 of 7 part(s) with 1 file(s) remainingCompleted 5 of 7 part(s) with 1 file(s) remainingCompleted 6 of 7 part(s) with 1 file(s) remainingCompleted 7 of 7 part(s) with 1 file(s) remainingupload: ./33mb.img to s3://S3BUCKET/33mb.img

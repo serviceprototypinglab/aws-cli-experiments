@@ -1,0 +1,54 @@
+commit 3a18b9887d6b1604b0b47a5b85498ecac63bb23b
+Author: Josef Spillner <spio@tiguriner>
+Date:   Mon Apr 25 11:36:40 2016 +0200
+
+    - make it possible to specify the chunk size per invocation in addition to (and overriding) the configuration file values
+
+diff --git a/awscli/customizations/s3/s3handler.py b/awscli/customizations/s3/s3handler.py
+index 47b516d..57214ce 100644
+--- a/awscli/customizations/s3/s3handler.py
++++ b/awscli/customizations/s3/s3handler.py
+@@ -65,7 +65,7 @@ class S3Handler(object):
+             'only_show_errors': False, 'is_stream': False,
+             'paths_type': None, 'expected_size': None, 'metadata': None,
+             'metadata_directive': None, 'ignore_glacier_warnings': False,
+-            'force_glacier_transfer': False
++            'force_glacier_transfer': False, 'chunk_size': None
+         }
+         self.params['region'] = params['region']
+         for key in self.params.keys():
+@@ -73,6 +73,8 @@ class S3Handler(object):
+                 self.params[key] = params[key]
+         self.multi_threshold = self._runtime_config['multipart_threshold']
+         self.chunksize = self._runtime_config['multipart_chunksize']
++        if self.params['chunk_size']:
++            self.chunksize = self.params['chunk_size']
+         LOGGER.debug("Using a multipart threshold of %s and a part size of %s",
+                      self.multi_threshold, self.chunksize)
+         self.executor = Executor(
+diff --git a/awscli/customizations/s3/subcommands.py b/awscli/customizations/s3/subcommands.py
+index f154167..6b4fccc 100644
+--- a/awscli/customizations/s3/subcommands.py
++++ b/awscli/customizations/s3/subcommands.py
+@@ -401,6 +401,11 @@ FORCE_GLACIER_TRANSFER = {
+ }
+ 
+ 
++CHUNK_SIZE = {'name': 'chunk-size', 'cli_type_name': 'integer',
++             'help_text': (
++                 'The size of each part in a copy transmission, in bytes.')}
++
++
+ TRANSFER_ARGS = [DRYRUN, QUIET, INCLUDE, EXCLUDE, ACL,
+                  FOLLOW_SYMLINKS, NO_FOLLOW_SYMLINKS, NO_GUESS_MIME_TYPE,
+                  SSE, SSE_C, SSE_C_KEY, SSE_KMS_KEY_ID, SSE_C_COPY_SOURCE,
+@@ -408,7 +413,8 @@ TRANSFER_ARGS = [DRYRUN, QUIET, INCLUDE, EXCLUDE, ACL,
+                  WEBSITE_REDIRECT, CONTENT_TYPE, CACHE_CONTROL,
+                  CONTENT_DISPOSITION, CONTENT_ENCODING, CONTENT_LANGUAGE,
+                  EXPIRES, SOURCE_REGION, ONLY_SHOW_ERRORS,
+-                 PAGE_SIZE, IGNORE_GLACIER_WARNINGS, FORCE_GLACIER_TRANSFER]
++                 PAGE_SIZE, IGNORE_GLACIER_WARNINGS, FORCE_GLACIER_TRANSFER,
++                 CHUNK_SIZE]
+ 
+ 
+ def get_client(session, region, endpoint_url, verify, config=None):

@@ -1,0 +1,5 @@
+num,(re)tries,success,overallsuccess,overallsuccesspercent,overhead
+1,18,9,1,100,2.00
+2,35,18,1,100,1.94
+3,51,24,0,66,2.12
+4,65,33,1,75,1.97

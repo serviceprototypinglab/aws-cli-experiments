@@ -1,0 +1,4 @@
+partsize(MB),success,failure
+5.0,1,10
+8.0,1,10
+16.0,5,6
