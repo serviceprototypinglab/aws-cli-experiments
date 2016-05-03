@@ -1,13 +1,43 @@
-commit 3a18b9887d6b1604b0b47a5b85498ecac63bb23b
-Author: Josef Spillner <spio@tiguriner>
-Date:   Mon Apr 25 11:36:40 2016 +0200
-
-    - make it possible to specify the chunk size per invocation in addition to (and overriding) the configuration file values
-
+diff --git a/awscli/customizations/s3/executor.py b/awscli/customizations/s3/executor.py
+index 16e0a45..f6446f3 100644
+--- a/awscli/customizations/s3/executor.py
++++ b/awscli/customizations/s3/executor.py
+@@ -333,9 +333,9 @@ class PrintThread(threading.Thread):
+             key = ':'.join(print_components[1:])
+             if key in self._progress_dict:
+                 self._progress_dict.pop(print_str, None)
++                self._file_count += 1
+             else:
+                 self._num_parts += 1
+-            self._file_count += 1
+ 
+         # If the message is an error or warning, print it to standard error.
+         if print_to_stderr and not self._quiet:
+@@ -360,7 +360,10 @@ class PrintThread(threading.Thread):
+         prog_str += "part(s) with %s file(s) remaining" % \
+             num_files
+         length_prog = len(prog_str)
+-        prog_str += '\r'
++        if not os.getenv("AWSRETRYDEBUG"):
++            prog_str += '\r'
++        else:
++            prog_str += '\n'
+         prog_str = prog_str.ljust(self._progress_length, ' ')
+         self._progress_length = length_prog
+         return prog_str
 diff --git a/awscli/customizations/s3/s3handler.py b/awscli/customizations/s3/s3handler.py
-index 47b516d..57214ce 100644
+index 47b516d..55a6f8c 100644
 --- a/awscli/customizations/s3/s3handler.py
 +++ b/awscli/customizations/s3/s3handler.py
+@@ -18,7 +18,7 @@ import sys
+ 
+ from awscli.customizations.s3.utils import (
+     find_chunksize, adjust_chunksize_to_upload_limits, MAX_UPLOAD_SIZE,
+-    find_bucket_key, relative_path, PrintTask, create_warning)
++    find_bucket_key, relative_path, PrintTask, create_warning, human_readable_to_bytes)
+ from awscli.customizations.s3.executor import Executor
+ from awscli.customizations.s3 import tasks
+ from awscli.customizations.s3.transferconfig import RuntimeConfig
 @@ -65,7 +65,7 @@ class S3Handler(object):
              'only_show_errors': False, 'is_stream': False,
              'paths_type': None, 'expected_size': None, 'metadata': None,
@@ -22,19 +52,19 @@ index 47b516d..57214ce 100644
          self.multi_threshold = self._runtime_config['multipart_threshold']
          self.chunksize = self._runtime_config['multipart_chunksize']
 +        if self.params['chunk_size']:
-+            self.chunksize = self.params['chunk_size']
++            self.chunksize = human_readable_to_bytes(self.params['chunk_size'])
          LOGGER.debug("Using a multipart threshold of %s and a part size of %s",
                       self.multi_threshold, self.chunksize)
          self.executor = Executor(
 diff --git a/awscli/customizations/s3/subcommands.py b/awscli/customizations/s3/subcommands.py
-index f154167..6b4fccc 100644
+index f154167..a2e5199 100644
 --- a/awscli/customizations/s3/subcommands.py
 +++ b/awscli/customizations/s3/subcommands.py
 @@ -401,6 +401,11 @@ FORCE_GLACIER_TRANSFER = {
  }
  
  
-+CHUNK_SIZE = {'name': 'chunk-size', 'cli_type_name': 'integer',
++CHUNK_SIZE = {'name': 'chunk-size',
 +             'help_text': (
 +                 'The size of each part in a copy transmission, in bytes.')}
 +
@@ -52,3 +82,120 @@ index f154167..6b4fccc 100644
  
  
  def get_client(session, region, endpoint_url, verify, config=None):
+diff --git a/awscli/customizations/s3/tasks.py b/awscli/customizations/s3/tasks.py
+index 90fec3f..5edbc10 100644
+--- a/awscli/customizations/s3/tasks.py
++++ b/awscli/customizations/s3/tasks.py
+@@ -1,3 +1,4 @@
++# -*- coding: utf-8 -*-
+ import logging
+ import math
+ import os
+@@ -218,7 +219,7 @@ class UploadPartTask(OrderableTask):
+         starting_byte = in_file_part_number * self._chunk_size
+         return ReadFileChunk(actual_filename, starting_byte, self._chunk_size)
+ 
+-    def __call__(self):
++    def __call__(self, attempts=None):
+         LOGGER.debug("Uploading part %s for filename: %s",
+                      self._part_number, self._filename.src)
+         try:
+@@ -255,6 +256,17 @@ class UploadPartTask(OrderableTask):
+             # task has already queued a message.
+             LOGGER.debug("Not uploading part, task has been cancelled.")
+         except Exception as e:
++            if os.getenv("AWSRETRYDEBUG"):
++                print("»» retrypart return code: 1 (part {:d})".format(self._part_number))
++            if attempts is None:
++                attempts = 0
++                if os.getenv("AWSRETRY"):
++                    attempts = int(os.getenv("AWSRETRY"))
++            if attempts != 0:
++                if os.getenv("AWSRETRYDEBUG"):
++                    print("»» retrypart retry copy ({:d} left)".format(attempts))
++                self.__call__(attempts - 1)
++                return
+             LOGGER.debug('Error during part upload: %s', e,
+                          exc_info=True)
+             message = print_operation(self._filename, failed=True,
+@@ -266,6 +278,8 @@ class UploadPartTask(OrderableTask):
+         else:
+             LOGGER.debug("Part number %s completed for filename: %s",
+                          self._part_number, self._filename.src)
++            if os.getenv("AWSRETRYDEBUG"):
++                print("»» retrypart return code: 0 (part {:d})".format(self._part_number))
+ 
+ 
+ class CreateLocalFileTask(OrderableTask):
+@@ -463,7 +477,7 @@ class CreateMultipartUploadTask(BasicTask):
+             session, filename, parameters, result_queue)
+         self._upload_context = upload_context
+ 
+-    def __call__(self):
++    def __call__(self, attempts=None):
+         LOGGER.debug("Creating multipart upload for file: %s",
+                      self.filename.src)
+         try:
+@@ -471,6 +485,17 @@ class CreateMultipartUploadTask(BasicTask):
+             LOGGER.debug("Announcing upload id: %s", upload_id)
+             self._upload_context.announce_upload_id(upload_id)
+         except Exception as e:
++            if os.getenv("AWSRETRYDEBUG"):
++                print("»» retrycreate return code: 1 (create)")
++            if attempts is None:
++                attempts = 0
++                if os.getenv("AWSRETRY"):
++                    attempts = int(os.getenv("AWSRETRY"))
++            if attempts != 0:
++                if os.getenv("AWSRETRYDEBUG"):
++                    print("»» retrycreate retry create ({:d} left)".format(attempts))
++                self.__call__(attempts - 1)
++                return
+             LOGGER.debug("Error trying to create multipart upload: %s",
+                          e, exc_info=True)
+             self._upload_context.cancel_upload()
+@@ -480,6 +505,8 @@ class CreateMultipartUploadTask(BasicTask):
+             result = {'message': message, 'error': True}
+             self.result_queue.put(PrintTask(**result))
+             raise e
++        if os.getenv("AWSRETRYDEBUG"):
++            print("»» retrycreate return code: 0 (create)")
+ 
+ 
+ class RemoveRemoteObjectTask(OrderableTask):
+@@ -502,7 +529,7 @@ class CompleteMultipartUploadTask(BasicTask):
+             session, filename, parameters, result_queue)
+         self._upload_context = upload_context
+ 
+-    def __call__(self):
++    def __call__(self, attempts=None):
+         LOGGER.debug("Completing multipart upload for file: %s",
+                      self.filename.src)
+         upload_id = self._upload_context.wait_for_upload_id()
+@@ -518,6 +545,17 @@ class CompleteMultipartUploadTask(BasicTask):
+             response_data = self.filename.client.complete_multipart_upload(
+                 **params)
+         except Exception as e:
++            if os.getenv("AWSRETRYDEBUG"):
++                print("»» retrypart return code: 1 (part last)")
++            if attempts is None:
++                attempts = 0
++                if os.getenv("AWSRETRY"):
++                    attempts = int(os.getenv("AWSRETRY"))
++            if attempts != 0:
++                if os.getenv("AWSRETRYDEBUG"):
++                    print("»» retrypart retry copy ({:d} left)".format(attempts))
++                self.__call__(attempts - 1)
++                return
+             LOGGER.debug("Error trying to complete multipart upload: %s",
+                          e, exc_info=True)
+             message = print_operation(
+@@ -535,6 +573,8 @@ class CompleteMultipartUploadTask(BasicTask):
+                                       self.parameters['dryrun'])
+             result = {'message': message, 'error': False}
+             self._upload_context.announce_completed()
++            if os.getenv("AWSRETRYDEBUG"):
++                print("»» retrypart return code: 0 (part last)")
+         self.result_queue.put(PrintTask(**result))
+ 
+ 
