@@ -1,0 +1,33 @@
+#!/bin/sh
+
+echo "== MIGHTY INIT SCRIPT =="
+
+/bin/busybox --install -s
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+
+mknod /dev/null c 1 3
+mknod /dev/tty c 5 0
+mknod /dev/tty0 c 4 0
+mknod /dev/tty1 c 4 1
+mdev -s
+
+mount /dev/sda /newroot
+
+mkdir -p /newroot/proc
+mkdir -p /newroot/dev
+mknod /newroot/dev/urandom c 1 9
+
+cp /bin/busybox /newroot
+echo "/busybox mount -t proc proc /proc" > /newroot/hello-init
+echo "/lib64/ld-linux-x86-64.so.2 /bin/true" >> /newroot/hello-init
+chmod +x /newroot/hello-init
+
+echo "/newroot/lib64/ld-linux-x86-64.so.2 /newroot/bin/true" > /bin/hello
+chmod +x /bin/hello
+
+#exec setsid sh -c 'exec sh </dev/tty1 >/dev/tty1 2>&1'
+exec setsid sh -c 'exec chroot /newroot /busybox sh </dev/tty1 >/dev/tty1 2>&1'
+#exec chroot /newroot /busybox sh

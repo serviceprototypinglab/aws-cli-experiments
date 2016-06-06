@@ -1,0 +1,7 @@
+time,percent,state
+0,2,pending
+90,4,validating
+105,7,validated
+115,28,converting
+591,30,updating
+784,0,internalerror

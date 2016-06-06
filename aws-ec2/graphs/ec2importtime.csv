@@ -1,0 +1,12 @@
+time,percent,state
+0,2,pending
+85,4,validating
+102,7,validated
+111,28,converting
+280,30,updating
+582,50,updated
+591,52,preparing to boot
+623,59,booting
+889,70,booted
+938,76,preparing ami
+1316,100,completed

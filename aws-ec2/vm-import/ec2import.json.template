@@ -1,0 +1,8 @@
+[{
+    "Description": "MyDisk",
+    "Format": "raw",
+    "UserBucket": {
+        "S3Bucket": "<disk-image-file-bucket>",
+        "S3Key": "mydisk.img/..."
+    }
+}]

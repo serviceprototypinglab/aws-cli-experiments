@@ -1,0 +1,13 @@
+#!/sh
+
+echo "** minimum system setup **"
+
+mount -t proc proc /proc
+mount -o remount,rw /
+
+mkdir /dev
+mknod /dev/urandom c 1 9
+
+echo "** setup done **"
+
+sh

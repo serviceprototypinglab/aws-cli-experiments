@@ -1,0 +1,12 @@
+# old, no full installation:
+#grub-install --boot-directory=/mnt/boot --target=i386-pc --grub-setup=/bin/true --debug /dev/loop0 > GRUBDEBUG.scratch 2>&1
+
+cp /unikernel-folder/test.img .
+
+# note: -o loop => /dev/loop0 implied
+mount test.img /mnt
+grub-install --boot-directory=/mnt/boot --target=i386-pc --debug --force /dev/loop0
+cp grub.cfg /mnt/boot/grub
+umount /mnt
+
+cp test.img /unikernel-folder/test.grub.img

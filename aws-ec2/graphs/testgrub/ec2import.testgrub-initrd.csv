@@ -1,0 +1,8 @@
+time,percent,state
+0,2,pending
+86,4,validating
+103,7,validated
+113,28,converting
+281,30,updating
+445,8,deleting
+513,0,deleted
